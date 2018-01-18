@@ -5,10 +5,25 @@
 {% endblock %}
 
 {% block content %}
-    {% for key, value in result.iteritems() %}
-        <tr>
-            <th>{{key}}</th>
-            <td>{{value}}</td>
-        </tr>
-    {% endfor %}
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1 class="display-3">Showing tweets for <span class="text-primary">@{{ handle }}</span></h1>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="text-primary text-bold">
+                <td>Date</td>
+                <td>Tweet content</td>
+                <td>Number of English words</td>
+            </thead>
+            {% for t in tweets %}
+                <tr>
+                    <td>{{ t.datetime }}</td>
+                    <td>{{ t.text }}</td>
+                    <td>{{ t.english_word_count }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}
