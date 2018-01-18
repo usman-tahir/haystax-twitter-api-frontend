@@ -1,0 +1,32 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1 class="display-3">Welcome to the Twitter API Frontend</h1>
+            <p class="text-primary">To begin, enter a twitter username in the search field below</p>
+        </div>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="text-primary">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="username" placeholder="Enter username here">
+                    </div>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                    <button class="btn btn-primary btn-md btn-block">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
