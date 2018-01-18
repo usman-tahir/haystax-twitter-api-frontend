@@ -1,2 +1,6 @@
 Flask
-Twitter
+Flask-Bootstrap
+Flask-WTF
+TwitterAPI
+urllib3
+click
