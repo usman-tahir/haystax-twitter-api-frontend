@@ -2,6 +2,6 @@ Flask
 Flask-Bootstrap
 Flask-WTF
 TwitterAPI
-# PyEnchant
+pyenchant
 urllib3
 click

@@ -1,6 +1,6 @@
 FROM python:3.6-slim
 
-RUN apt-get update -y && apt-get install -y python-dev build-essential vim less
+RUN apt-get update -y && apt-get install -y python-dev build-essential vim less python-enchant
 
 COPY . /opt/haystax-twitter-api-frontend
 WORKDIR /opt/haystax-twitter-api-frontend
