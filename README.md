@@ -1,6 +1,6 @@
 # Haystax Twitter API Frontend
 
-### Preqreuisites
+### Prerequisites
 
 * Docker (Community Edition)
 * Python 3.6.X
