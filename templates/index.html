@@ -8,7 +8,7 @@
     <div class="jumbotron">
         <div class="container text-center">
             <h1 class="display-3">Welcome to the Twitter API Frontend</h1>
-            <p class="text-primary">To begin, enter a twitter username in the search field below</p>
+            <p class="text-primary">To begin, enter a twitter search term/username in the search field below</p>
         </div>
     </div>
     <div class="container">
@@ -17,9 +17,9 @@
                 <div class="col-lg-4 col-lg-offset-4">
                     <div class="input-group">
                         <div class="input-group-addon">
-                            <span class="text-primary">@</span>
+                            <span class="text-primary glyphicon glyphicon-search"></span>
                         </div>
-                        <input type="text" class="form-control" id="handle" name="handle" placeholder="Enter handle here">
+                        <input type="text" class="form-control" id="search" name="search" placeholder="{{ message }}">
                     </div>
                     <br>
                 </div>

@@ -7,15 +7,16 @@
 {% block content %}
     <div class="jumbotron">
         <div class="container text-center">
-            <h1 class="display-3">Showing tweets for <span class="text-primary">@{{ handle }}</span></h1>
+            <h1 class="display-3">Showing tweets related to <span class="text-primary">{{ search }}</span></h1>
+            <p>{{ count }} out of a maximum of 5 recent tweets are shown.</p>
         </div>
     </div>
     <div class="container">
         <table class="table table-bordered table-hover text-center">
             <thead class="text-primary text-bold">
-                <td>Date</td>
-                <td>Tweet content</td>
-                <td>Number of English words</td>
+                <td><strong>Date</strong></td>
+                <td><strong>Tweet content</strong></td>
+                <td><strong>Number of English words</strong></td>
             </thead>
             {% for t in tweets %}
                 <tr>
