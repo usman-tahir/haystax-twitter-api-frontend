@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    {% for key, value in result.iteritems() %}
+        <tr>
+            <th>{{key}}</th>
+            <td>{{value}}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
