@@ -1,4 +1,9 @@
 import enchant
+import time
+
+def format_time(created_at):
+    timestamp = time.strftime('%m/%d/%Y %H:%M:%S', time.strptime(created_at,'%a %b %d %H:%M:%S +0000 %Y'))
+    return timestamp
 
 def sanitize_word_input(sentence):
     symbols = [

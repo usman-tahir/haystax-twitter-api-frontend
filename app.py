@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from flask_bootstrap import Bootstrap
 from authorization import *
+from utility import *
 
 import random
 
@@ -31,9 +32,9 @@ def search():
             tweet_data = []
             for item in result.get_iterator():
                 parsed_item = {
-                    "datetime": item["created_at"],
+                    "datetime": format_time(item["created_at"]),
                     "text": item["text"],
-                    "english_word_count": 0
+                    "english_word_count": check_words(item["text"])
                 }   
                 tweet_data.append(parsed_item)
             if len(tweet_data) == 0:
